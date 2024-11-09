@@ -1,0 +1,14 @@
+<main class="main flex items-center justify-between p-4">
+  <div class="content">
+    <h1 class="text-3xl font-bold">{{ title }}</h1>
+  </div>
+
+  <div *ngIf="authService.isLoggedIn()" class="flex items-center space-x-4">
+    <span class="text-gray-700">Welcome back!</span>
+    <button (click)="logout()" class="text-sm font-medium text-indigo-600 hover:underline">
+      Logout
+    </button>
+  </div>
+</main>
+
+<router-outlet />

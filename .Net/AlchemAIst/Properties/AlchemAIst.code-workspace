@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "name": "AlchemAIst",
+      "path": "../../.."
+    }
+  ],
+  "settings": {
+    "tailwindCSS.experimental.classRegex": [],
+    "files.associations": {
+      "*.css": "tailwindcss"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="container mx-auto p-4">
+  <p class="text-xl font-semibold mb-4">AlchemAIsts:</p>
+  <ul class="flex flex-col gap-4">
+    @for (person of people$ | async; track person.firstname) {
+    <li class="p-4 border rounded-md hover:bg-gray-100">
+      <a class="text-blue-600 hover:text-blue-800" [routerLink]="['/people', person._id, 'products']"
+        [state]="{ person: person }">
+        {{ person.firstname }} {{ person.lastname }}
+      </a>
+    </li>
+    } @empty {
+    <li>No people.</li>
+    }
+  </ul>
+</div>
